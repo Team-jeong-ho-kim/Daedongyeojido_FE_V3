@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { Header } from "../components/Header";
+import { Header } from "../components/seeallPage/Header";
+import { CollectBtn } from "../components/SeeallPage/CollectBtn";
+import { Pagefooter } from "../components/SeeallPage/PageFooter";
 
 
 export const SeeAll = () => {
@@ -17,19 +19,18 @@ export const SeeAll = () => {
         <Grid>
           {Array.from({ length: 8 }).map((_, index) => (
             <Card key={index}>
-              <CardImage />
+              <CardImage>
+                <CollectBtn />
+              </CardImage>
               <CardContent>
                 <h3>대동여지도</h3>
                 <p>대동여지도와 실록 서비스를 개발 및 운영 중인 동아리</p>
-                <Badge>모집 중</Badge>
               </CardContent>
             </Card>
           ))}
         </Grid>
       </Content>
-      <Footer>
-        <FooterText>@DAEDONGYEOJIDO | 주소: 대한민국 어딘가</FooterText>
-      </Footer>
+      <Pagefooter />
     </Container>
   );
 };
@@ -55,8 +56,12 @@ const Content = styled.main`
 `;
 
 const SectionTitle = styled.h2`
-  font-size: 24px;
+  font-size: 34px;
+  margin-top: 20px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-weight: 300;
 `;
 
 const SearchBar = styled.div`
@@ -91,6 +96,7 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
+  margin-bottom: 200px;
 `;
 
 const Card = styled.div`
@@ -125,24 +131,3 @@ const CardContent = styled.div`
     font-size: 14px;
   }
 `;
-
-const Badge = styled.span`
-  align-self: flex-start;
-  padding: 5px 10px;
-  background-color: red;
-  color: white;
-  border-radius: 4px;
-  font-size: 12px;
-`;
-
-const Footer = styled.footer`
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
-`;
-
-const FooterText = styled.p`
-  margin: 0;
-`;
-
