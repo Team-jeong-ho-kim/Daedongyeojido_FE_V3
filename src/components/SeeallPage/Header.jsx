@@ -1,38 +1,36 @@
-import React from "react";
 import styled from "styled-components";
 
-import logoImg from '../../assets/logo.svg'
-import archiveLogo from '../../assets/archivelogo.svg'
-
+import logoImg from "../../assets/logo.svg";
+import archiveLogo from "../../assets/archivelogo.svg";
 
 export const Header = () => {
   return (
     <Container>
-    <SubHeader>
-    <SubHeaderDiv>
-    <SubTitleDiv>
-    <SubLogoImg src={logoImg} />
-    <Title>대동여지도</Title>
-    <Border />
-    <ArchiveLogo src={archiveLogo}/>
-    </SubTitleDiv>
-    </SubHeaderDiv>
-  </SubHeader>
-  <PageHeader>
-    <HeaderDiv>
-    <TitleDiv>
-    <LogoImg src={logoImg} />
-    <Title>대동여지도</Title>
-    </TitleDiv>
-    <Nav>
-      <NavLink href="#">동아리 소개</NavLink>
-      <NavLink href="#">팀원 소개</NavLink>
-      <NavLink href="#">전공 동아리</NavLink>
-      <NavLink href="#">공고</NavLink>
-    </Nav>
-    </HeaderDiv>
-  </PageHeader>
-</Container>
+      <SubHeader>
+        <SubHeaderDiv>
+          <SubTitleDiv>
+            <SubLogoImg src={logoImg} />
+            <Title>대동여지도</Title>
+            <Border />
+            <ArchiveLogo src={archiveLogo} />
+          </SubTitleDiv>
+        </SubHeaderDiv>
+      </SubHeader>
+      <PageHeader>
+        <HeaderDiv>
+          <TitleDiv>
+            <LogoImg src={logoImg} />
+            <Title>대동여지도</Title>
+          </TitleDiv>
+          <Nav>
+            <NavLink href="#">동아리 소개</NavLink>
+            <NavLink href="#">팀원 소개</NavLink>
+            <NavLink href="#">전공 동아리</NavLink>
+            <NavLink href="#">공고</NavLink>
+          </Nav>
+        </HeaderDiv>
+      </PageHeader>
+    </Container>
   );
 };
 
@@ -52,7 +50,7 @@ const SubHeader = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 0;
-`
+`;
 
 const PageHeader = styled.header`
   background-color: white;
@@ -66,20 +64,20 @@ const HeaderDiv = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-`
+`;
 
 const SubHeaderDiv = styled.div`
   display: flex;
   width: 80%;
   justify-content: start;
   margin-left: auto;
-`
+`;
 
 const SubTitleDiv = styled.div`
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 `;
 
 const TitleDiv = styled.div`
@@ -87,14 +85,14 @@ const TitleDiv = styled.div`
   margin-bottom: 10px;
   display: flex;
   align-items: center;
-  gap: 10px
+  gap: 10px;
 `;
 
 const Border = styled.div`
   border-right: 1px solid #8a8a8a;
   width: 10px;
   height: 30px;
-`
+`;
 
 const LogoImg = styled.img`
   margin: 0;

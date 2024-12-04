@@ -1,9 +1,7 @@
-import React from "react";
 import styled from "styled-components";
-import { Header } from "../components/seeallPage/Header";
+import { Header } from "../components/SeeallPage/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
 import { Pagefooter } from "../components/SeeallPage/PageFooter";
-
 
 export const SeeAll = () => {
   return (
