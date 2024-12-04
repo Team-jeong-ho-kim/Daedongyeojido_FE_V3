@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import ClubLogo from "../Club/동아리사진.svg";
 
+
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
 
