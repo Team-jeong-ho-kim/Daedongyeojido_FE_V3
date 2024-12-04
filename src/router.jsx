@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
+
 import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
-import styled from "styled-components";
 
 export const Router = () => {
   return (
@@ -9,7 +10,7 @@ export const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/seeall" element={<SeeAll />} />
-          <Route path="/" element={<ClubMain />} />
+          <Route path="/club" element={<ClubMain />} />
         </Routes>
       </BrowserRouter>
     </Container>
