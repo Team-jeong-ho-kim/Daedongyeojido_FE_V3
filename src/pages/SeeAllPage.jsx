@@ -3,6 +3,7 @@ import { Header } from "../components/SeeallPage/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
 import { Pagefooter } from "../components/SeeallPage/PageFooter";
 
+
 export const SeeAll = () => {
   return (
     <Container>
