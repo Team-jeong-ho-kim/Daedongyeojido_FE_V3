@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { SeeAll } from "./pages/SeeAllPage";
 import { SeeAll } from "./pages/SeeAll";
 import { ClubMain } from "./pages/ClubMain";
 import styled from "styled-components";

@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { Header } from "../components/SeeallPage/Header";
+import { TeamProfiles } from "../components/Club/TeamProfiles";
 import { Header } from "../components/Header";
 import { TeamProfiles } from "../components/TeamProfiles";
 
