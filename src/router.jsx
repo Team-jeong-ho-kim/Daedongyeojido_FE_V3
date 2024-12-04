@@ -3,7 +3,6 @@ import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
 import styled from "styled-components";
 
-
 export const Router = () => {
   return (
     <Container>
