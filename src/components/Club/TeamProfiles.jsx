@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import ClubLogo from "../Club/동아리사진.svg";
-import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
-import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
+import { IntroProject } from "../../pages/user/ClubBottomPages/IntroProject";
+import { MemberGuid } from "../../pages/user/ClubBottomPages/MemberGuid";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
