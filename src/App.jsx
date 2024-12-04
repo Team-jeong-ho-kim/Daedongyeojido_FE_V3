@@ -2,7 +2,9 @@ import { Router } from './Router';
 import '../src/App.css';
 
 export const App = () => {
-  return <Router />;
+  return (
+    <Router />
+  );
 };
 
 export default App;

@@ -1,5 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { SeeAll } from "./pages/SeeAll";
+import { SeeAll } from "./pages/SeeAllPage";
 import styled from "styled-components";
 
 export const Router = () => {
