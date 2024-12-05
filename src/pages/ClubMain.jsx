@@ -14,6 +14,4 @@ export const ClubMain = () => {
   );
 };
 
-const ClubMainAll = styled.div`
-  
-`;
+const ClubMainAll = styled.div``;

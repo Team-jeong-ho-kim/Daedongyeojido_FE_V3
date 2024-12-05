@@ -33,8 +33,8 @@ export const TeamProfiles = () => {
             </ClubIntro>
           </ClubName>
           <TagsAll>
-            <Tag>동아리 소개</Tag>
-            <Tag>팀원 소개</Tag>
+            <Tag onClick={() => setMovePage("introClub")}>동아리 소개</Tag>
+            <Tag onClick={() => setMovePage("introMember")}>팀원 소개</Tag>
             <Tag onClick={() => setMovePage("introProject")}>프로젝트 소개</Tag>
             <Tag onClick={() => setMovePage("memberGuid")}>
               동아리원 모집 요강
