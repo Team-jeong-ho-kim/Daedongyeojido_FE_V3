@@ -61,6 +61,8 @@ const TitleLogo = styled.div`
 `;
 
 const FooterDiv = styled.div`
+  margin-top: 500px;
+  bottom: 0;
   background-color: #333;
   color: white;
   padding: 20px;
