@@ -30,3 +30,4 @@ const Badge = styled.span`
   align-items: center; /* 내부 텍스트 중앙 정렬 */
   width: 52px;
 `;
+
