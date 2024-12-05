@@ -1,8 +1,7 @@
 import styled from "styled-components";
-import { Header } from "../components/SeeallPage/Header";
+import { Header } from "../components/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
-import { Pagefooter } from "../components/SeeallPage/PageFooter";
-
+import { Pagefooter } from "../components/PageFooter";
 
 export const SeeAll = () => {
   return (
