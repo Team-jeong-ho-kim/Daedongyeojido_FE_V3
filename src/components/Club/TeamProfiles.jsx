@@ -4,11 +4,12 @@ import Daedong from "../../assets/동아리사진.svg";
 import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
 import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
+import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState(prompt);
   const [movePage, setMovePage] = useState("introClub");
-  const [clickedTag, setClickedTag] = useState("introClub"); // 클릭된 태그 상태 추가
+  const [clickedTag, setClickedTag] = useState("introClub");
 
   const clubBottomPage = () => {
     switch (movePage) {
@@ -18,6 +19,8 @@ export const TeamProfiles = () => {
         return <MemberGuid />;
       case "introClub":
         return <IntroClub />;
+      case "introTeam":
+        return <IntroTeam />;
       default:
         return null;
     }
@@ -48,10 +51,10 @@ export const TeamProfiles = () => {
             </Tag>
             <Tag
               onClick={() => {
-                setMovePage("introMember");
-                setClickedTag("introMember"); // 클릭 시 해당 태그 상태로 설정
+                setMovePage("introTeam");
+                setClickedTag("introTeam"); // 클릭 시 해당 태그 상태로 설정
               }}
-              isClicked={clickedTag === "introMember"} // 클릭된 태그에 스타일 적용
+              isClicked={clickedTag === "introTeam"} // 클릭된 태그에 스타일 적용
             >
               팀원 소개
             </Tag>
