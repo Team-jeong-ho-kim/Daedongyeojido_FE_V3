@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 
 import { SeeAll } from "./pages/SeeAllPage";
-import { ClubMain } from "./pages/user/ClubMain";
+import { ClubMain } from "./pages/ClubMain";
 
 export const Router = () => {
   return (
