@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import logoImg from '../../assets/logo.svg'
-import archiveLogo from '../../assets/archivelogo.svg'
+import logoImg from '../../assets/logo.svg';
+import archiveLogo from '../../assets/archivelogo.svg';
+import profiler from '../../assets/profile.svg';
 
 
 export const Header = () => {
@@ -25,10 +26,8 @@ export const Header = () => {
     <Title>대동여지도</Title>
     </TitleDiv>
     <Nav>
-      <NavLink href="#">동아리 소개</NavLink>
-      <NavLink href="#">팀원 소개</NavLink>
-      <NavLink href="#">전공 동아리</NavLink>
-      <NavLink href="#">공고</NavLink>
+      <Profile src={profiler} />
+      <NavLink href="#">OOO님</NavLink>
     </Nav>
     </HeaderDiv>
   </PageHeader>
@@ -90,6 +89,13 @@ const TitleDiv = styled.div`
   gap: 10px
 `;
 
+const Profile = styled.img`
+  margin: 0;
+  width: 30%;
+  border: 0.5px solid #ddd;
+  border-radius: 100px;
+`
+
 const Border = styled.div`
   border-right: 1px solid #8a8a8a;
   width: 10px;
@@ -117,7 +123,7 @@ const Title = styled.h1`
 
 const Nav = styled.nav`
   display: flex;
-  gap: 20px;
+  gap: 10px;
   justify-content: flex-end;
   align-items: center;
 `;
@@ -125,7 +131,8 @@ const Nav = styled.nav`
 const NavLink = styled.a`
   text-decoration: none;
   color: #333;
-  font-weight: bold;
+  font-weight: 300;
+  font-size: 12px;
 
   &:hover {
     color: red;
