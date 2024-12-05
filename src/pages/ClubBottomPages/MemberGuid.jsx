@@ -13,6 +13,7 @@ export const MemberGuid = () => {
           <Text>{introClub}</Text>
         </TextField>
       </ClubIntroTextAll>
+      <JoinField></JoinField>
     </MemberGuidAll>
   );
 };
@@ -39,3 +40,5 @@ const Text = styled.p`
   font-size: 20px;
   font-weight: 500;
 `;
+
+const JoinField = styled.div``;
