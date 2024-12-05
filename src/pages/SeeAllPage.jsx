@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Header } from "../components/seeallPage/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
 import { Pagefooter } from "../components/SeeallPage/PageFooter";
+import searchBtn from "../assets/searchBtn.svg";
 
 
 export const SeeAll = () => {
@@ -12,10 +13,12 @@ export const SeeAll = () => {
       <Banner />
       <Content>
         <SectionTitle>전체 전공 동아리</SectionTitle>
+        <SearchDiv>
         <SearchBar>
           <SearchInput placeholder="검색" />
-          <SearchButton>🔍</SearchButton>
+          <SearchButton src={searchBtn} />
         </SearchBar>
+        </SearchDiv>
         <Grid>
           {Array.from({ length: 8 }).map((_, index) => (
             <Card key={index}>
@@ -40,6 +43,7 @@ const Container = styled.div`
   margin: 0;
   padding: 0;
   font-family: "Pretendard";
+  height: 50vh;
 `;
 
 const Banner = styled.div`
@@ -52,7 +56,6 @@ const Banner = styled.div`
 const Content = styled.main`
   max-width: 1200px;
   margin: auto;
-  padding: 20px;
 `;
 
 const SectionTitle = styled.h2`
@@ -64,32 +67,34 @@ const SectionTitle = styled.h2`
   font-weight: 300;
 `;
 
+const SearchDiv = styled.div`
+  position: relative;
+  width: 50%;
+  margin: auto;
+`
+
 const SearchBar = styled.div`
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
-`;
+  margin: 0px 0px 40px 0px;
+  `;
 
 const SearchInput = styled.input`
-  width: 300px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-right: 10px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #D32F2F;
+  border-radius: 100px;
+  display: flex;
 `;
 
-const SearchButton = styled.button`
-  padding: 10px 20px;
-  border: none;
-  background-color: red;
-  color: white;
-  border-radius: 4px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darkred;
-  }
+const SearchButton = styled.img`
+  position: absolute;
+  top: 5px;
+  bottom: 5px;
+  right: 5px;
+  border-radius: 15px;
 `;
 
 const Grid = styled.div`
@@ -111,7 +116,7 @@ const Card = styled.div`
 const CardImage = styled.div`
   width: 100%;
   height: 150px;
-  background-color: #bbb;
+  background-color: #9D9D9D;
 `;
 
 const CardContent = styled.div`
