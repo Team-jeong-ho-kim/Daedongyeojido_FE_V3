@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Header } from "../components/seeallPage/Header";
+import { Header } from "../components/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
-import { Pagefooter } from "../components/SeeallPage/PageFooter";
+import { Pagefooter } from "../components/PageFooter";
 import searchBtn from "../assets/searchBtn.svg";
-
 
 export const SeeAll = () => {
   return (
@@ -14,10 +13,10 @@ export const SeeAll = () => {
       <Content>
         <SectionTitle>전체 전공 동아리</SectionTitle>
         <SearchDiv>
-        <SearchBar>
-          <SearchInput placeholder="검색" />
-          <SearchButton src={searchBtn} />
-        </SearchBar>
+          <SearchBar>
+            <SearchInput placeholder="검색" />
+            <SearchButton src={searchBtn} />
+          </SearchBar>
         </SearchDiv>
         <Grid>
           {Array.from({ length: 8 }).map((_, index) => (
@@ -71,7 +70,7 @@ const SearchDiv = styled.div`
   position: relative;
   width: 50%;
   margin: auto;
-`
+`;
 
 const SearchBar = styled.div`
   display: flex;
@@ -79,12 +78,12 @@ const SearchBar = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0px 0px 40px 0px;
-  `;
+`;
 
 const SearchInput = styled.input`
   width: 100%;
   padding: 20px;
-  border: 1px solid #D32F2F;
+  border: 1px solid #d32f2f;
   border-radius: 100px;
   display: flex;
 `;
@@ -116,7 +115,7 @@ const Card = styled.div`
 const CardImage = styled.div`
   width: 100%;
   height: 150px;
-  background-color: #9D9D9D;
+  background-color: #9d9d9d;
 `;
 
 const CardContent = styled.div`
