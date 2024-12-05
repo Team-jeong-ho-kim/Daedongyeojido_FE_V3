@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import ClubLogo from "../Club/동아리사진.svg";
+import ClubLogo from "../../assets/동아리사진.svg";
 import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
 
