@@ -1,9 +1,11 @@
 import styled from "styled-components";
+import { Project } from "../../components/Club/Project";
 
 export const IntroProject = () => {
   return (
     <IntroProjectAll>
       <IntroTitle>프로젝트 소개</IntroTitle>
+      <Project />
     </IntroProjectAll>
   );
 };
