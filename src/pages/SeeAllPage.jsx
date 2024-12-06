@@ -41,7 +41,7 @@ const Container = styled.div`
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  font-family: "Pretendard";
+  font-family: "Pretendard"; 
   height: 50vh;
 `;
 
