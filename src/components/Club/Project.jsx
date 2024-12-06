@@ -27,7 +27,7 @@ const ProjectAll = styled.div`
   margin-top: 3%;
   border-radius: 7px;
   overflow: hidden;
-
+  
   display: flex;
 `;
 
