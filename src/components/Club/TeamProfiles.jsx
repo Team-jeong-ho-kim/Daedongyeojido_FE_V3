@@ -7,7 +7,7 @@ import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
 
 export const TeamProfiles = () => {
-  const [clubName, setClubName] = useState(prompt);
+  const [clubName, setClubName] = useState("대동여지도");
   const [movePage, setMovePage] = useState("introClub");
   const [clickedTag, setClickedTag] = useState("introClub");
 
@@ -149,8 +149,10 @@ const Tag = styled.div`
   font-weight: 400;
   height: 100%;
   cursor: pointer;
-  color: ${({ isClicked }) => (isClicked ? "#d32f2f" : "inherit")}; // 클릭된 상태에 색상 변경
-  border-bottom: ${({ isClicked }) => (isClicked ? "2px solid #d32f2f" : "none")}; // 클릭된 상태에 밑줄 스타일 추가
+  color: ${({ isClicked }) =>
+    isClicked ? "#d32f2f" : "inherit"}; // 클릭된 상태에 색상 변경
+  border-bottom: ${({ isClicked }) =>
+    isClicked ? "2px solid #d32f2f" : "none"}; // 클릭된 상태에 밑줄 스타일 추가
 
   &:hover {
     color: #d32f2f;
