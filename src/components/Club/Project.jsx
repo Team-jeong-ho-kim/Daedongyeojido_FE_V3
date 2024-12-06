@@ -24,10 +24,9 @@ const ProjectAll = styled.div`
   width: 1000px;
   height: 180px;
   border: 1px solid #b2b2b2;
-  margin-top: 3%;
+  margin-top: 2%;
   border-radius: 7px;
   overflow: hidden;
-  
   display: flex;
 `;
 

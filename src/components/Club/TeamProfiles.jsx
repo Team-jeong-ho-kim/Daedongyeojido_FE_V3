@@ -9,8 +9,7 @@ import { NullClub } from "../../pages/ClubBottomPages/NullClub";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
-  const [movePage, setMovePage] = useState("unknown");
-  
+  const [movePage, setMovePage] = useState("introClub");
   const [clickedTag, setClickedTag] = useState("introClub");
 
   const clubBottomPage = () => {
@@ -172,8 +171,7 @@ const Tag = styled.div`
   &:hover::before {
     left: 0;
   }
-
-
+  
   &:hover,
   &:active {
     color: #d32f2f;
