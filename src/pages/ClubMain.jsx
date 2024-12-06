@@ -14,4 +14,7 @@ export const ClubMain = () => {
   );
 };
 
-const ClubMainAll = styled.div``;
+const ClubMainAll = styled.div`
+  user-select: none; 
+  -webkit-user-select: none;
+`;

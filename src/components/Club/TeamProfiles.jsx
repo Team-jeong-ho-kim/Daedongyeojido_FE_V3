@@ -5,6 +5,7 @@ import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
 import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
+import { NullClub } from "../../pages/ClubBottomPages/NullClub";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
@@ -13,16 +14,16 @@ export const TeamProfiles = () => {
 
   const clubBottomPage = () => {
     switch (movePage) {
-      case "introProject":
-        return <IntroProject />;
-      case "memberGuid":
-        return <MemberGuid />;
       case "introClub":
         return <IntroClub />;
       case "introTeam":
         return <IntroTeam />;
+      case "introProject":
+        return <IntroProject />;
+      case "memberGuid":
+        return <MemberGuid />
       default:
-        return null;
+        return <NullClub />;
     }
   };
 
@@ -43,36 +44,36 @@ export const TeamProfiles = () => {
             <Tag
               onClick={() => {
                 setMovePage("introClub");
-                setClickedTag("introClub"); // 클릭 시 해당 태그 상태로 설정
+                setClickedTag("introClub");
               }}
-              isClicked={clickedTag === "introClub"} // 클릭된 태그에 스타일 적용
+              isClicked={clickedTag === "introClub"}
             >
               동아리 소개
             </Tag>
             <Tag
               onClick={() => {
                 setMovePage("introTeam");
-                setClickedTag("introTeam"); // 클릭 시 해당 태그 상태로 설정
+                setClickedTag("introTeam");
               }}
-              isClicked={clickedTag === "introTeam"} // 클릭된 태그에 스타일 적용
+              isClicked={clickedTag === "introTeam"}
             >
               팀원 소개
             </Tag>
             <Tag
               onClick={() => {
                 setMovePage("introProject");
-                setClickedTag("introProject"); // 클릭 시 해당 태그 상태로 설정
+                setClickedTag("introProject");
               }}
-              isClicked={clickedTag === "introProject"} // 클릭된 태그에 스타일 적용
+              isClicked={clickedTag === "introProject"}
             >
               프로젝트 소개
             </Tag>
             <Tag
               onClick={() => {
                 setMovePage("memberGuid");
-                setClickedTag("memberGuid"); // 클릭 시 해당 태그 상태로 설정
+                setClickedTag("memberGuid");
               }}
-              isClicked={clickedTag === "memberGuid"} // 클릭된 태그에 스타일 적용
+              isClicked={clickedTag === "memberGuid"}
             >
               동아리원 모집 요강
             </Tag>
@@ -149,14 +150,32 @@ const Tag = styled.div`
   font-weight: 400;
   height: 100%;
   cursor: pointer;
-  color: ${({ isClicked }) =>
-    isClicked ? "#d32f2f" : "inherit"}; // 클릭된 상태에 색상 변경
-  border-bottom: ${({ isClicked }) =>
-    isClicked ? "2px solid #d32f2f" : "none"}; // 클릭된 상태에 밑줄 스타일 추가
+  user-select: none; 
+  -webkit-user-select: none;  
+  color: ${({ isClicked }) => (isClicked ? "#d32f2f" : "inherit")};
+  border-bottom: ${({ isClicked }) => (isClicked ? "2px solid #d32f2f" : "none")};
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 1px;
+    background-color: #d32f2f;
+    transition: all 0.5s ease-in-out;
+  }
 
-  &:hover {
+  &:hover::before {
+    left: 0;
+  }
+  
+  &:hover,
+  &:active {
     color: #d32f2f;
-    border-bottom: 2px solid #d32f2f;
+    border-bottom: 1px solid transparent;
   }
 `;
 

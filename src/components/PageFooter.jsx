@@ -71,7 +71,7 @@ const FooterDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 25%;
+  margin-top: 100px;
 `;
 
 const LogoImg = styled.img`
