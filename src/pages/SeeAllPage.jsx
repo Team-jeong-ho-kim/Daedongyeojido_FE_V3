@@ -94,6 +94,7 @@ const SearchButton = styled.img`
   bottom: 5px;
   right: 5px;
   border-radius: 15px;
+  cursor: pointer;
 `;
 
 const Grid = styled.div`
