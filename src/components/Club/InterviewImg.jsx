@@ -25,6 +25,7 @@ export const InterviewImg = () => {
 };
 
 const InterviewImgAll = styled.div`
+margin-top: 5%;
   position: relative;
   width: 100%;
   height: 100px;
