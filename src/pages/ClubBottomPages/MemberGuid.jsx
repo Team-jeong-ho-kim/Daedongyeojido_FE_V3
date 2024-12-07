@@ -1,6 +1,8 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { Major } from "../../components/Club/Major";
+import { InterviewImg } from "../../components/Club/InterviewImg";
+import { HowMethod } from "../../components/Club/HowMethod";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -27,19 +29,37 @@ export const MemberGuid = () => {
 
   return (
     <MemberGuidAll>
+      {/* 동아리소개글 */}
       <ClubIntroTextAll>
         <TextField>
           <Text>{introClub}</Text>
         </TextField>
       </ClubIntroTextAll>
+
+      {/* 모집 분야 */}
       <JoinField>
         <JoinTitle>
-          <Title>모집 분야</Title>
+          <Title className="join">모집 분야</Title>
         </JoinTitle>
         <MajorField>
           <Major Majors={Majors} />
         </MajorField>
       </JoinField>
+
+      {/* 면접 절차 */}
+      <InterviewAll>
+        <InterviewTitle>
+          <Title className="interview">면접 절차</Title>
+        </InterviewTitle>
+        <Procedure>
+          <InterviewImg />
+        </Procedure>
+      </InterviewAll>
+
+      {/* 모집기간 및 지원방법 */}
+      <MethodField>
+        <HowMethod />
+      </MethodField>
     </MemberGuidAll>
   );
 };
@@ -68,6 +88,7 @@ const Text = styled.p`
 `;
 
 const JoinField = styled.div`
+  margin-top: 5%;
   width: 100%;
   height: 10%;
 `;
@@ -79,3 +100,19 @@ const Title = styled.h1`
 `;
 
 const MajorField = styled.div``;
+
+const InterviewAll = styled.div`
+  margin-top: 10%;
+  width: 100%;
+`;
+
+const InterviewTitle = styled.div``;
+
+const Procedure = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
+const MethodField = styled.div`
+  margin-top: 10%;
+`;
