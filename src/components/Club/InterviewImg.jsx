@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 import Register from "../../assets/interview/지원서 접수.svg";
-import firstSubject from "../../assets/interview/1차과제제출.svg";
+import FirstSubject from "../../assets/interview/1차과제제출.svg";
 import Document from "../../assets/interview/서류합격.svg";
 import SecondSubject from "../../assets/interview/2차과제제출.svg";
 import DeepInterview from "../../assets/interview/심층면접.svg";
@@ -14,7 +14,7 @@ export const InterviewImg = () => {
     <InterviewImgAll>
       <img className="line" src={Line} />
       <img className="icon" src={Register} alt="지원서 접수" />
-      <img className="icon" src={firstSubject} alt="1차 과제" />
+      <img className="icon" src={FirstSubject} alt="1차 과제" />
       <img className="icon" src={Document} alt="서류합격" />
       <img className="icon" src={SecondSubject} alt="2차 과제" />
       <img className="icon" src={DeepInterview} alt="심층 면접" />
