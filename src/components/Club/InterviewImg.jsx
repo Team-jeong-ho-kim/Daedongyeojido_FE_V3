@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-import Register from "../../assets/interview/지원서 접수.svg";
-import FirstSubject from "../../assets/interview/1차과제제출.svg";
-import Document from "../../assets/interview/서류합격.svg";
-import SecondSubject from "../../assets/interview/2차과제제출.svg";
-import DeepInterview from "../../assets/interview/심층면접.svg";
-import Last from "../../assets/interview/최종합격.svg";
-import ClubPin from "../../assets/interview/동아리확정.svg";
+import Register from "../../assets/interview/Register.svg";
+import FirstSubject from "../../assets/interview/FirstSubject.svg";
+import Document from "../../assets/interview/Document.svg";
+import SecondSubject from "../../assets/interview/SecondSubject.svg";
+import DeepInterview from "../../assets/interview/DeepInterview.svg";
+import Last from "../../assets/interview/Last.svg";
+import ClubPin from "../../assets/interview/ClubPin.svg";
 import Line from "../../assets/interview/Line.svg";
 
 export const InterviewImg = () => {
@@ -25,7 +25,7 @@ export const InterviewImg = () => {
 };
 
 const InterviewImgAll = styled.div`
-  margin-top: 3%;
+  margin-top: 5%;
   position: relative;
   width: 100%;
   height: 100px;
