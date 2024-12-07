@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Major } from "../../components/Club/Major";
 import { InterviewImg } from "../../components/Club/InterviewImg";
 import { HowMethod } from "../../components/Club/HowMethod";
+import { InJaeSang } from "../../components/Club/InJaeSang";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -26,6 +27,7 @@ export const MemberGuid = () => {
       text: "디자인",
     },
   ]);
+  const [clubName, setClubName] = useState("대동여지도");
 
   return (
     <MemberGuidAll>
@@ -60,9 +62,23 @@ export const MemberGuid = () => {
       <MethodField>
         <HowMethod />
       </MethodField>
+
+      {/* 동아리's 인재상 */}
+      <InjaeSangField>
+        <InJaeTitle>
+          <Title>{clubName}'s 인재상</Title>
+        </InJaeTitle>
+        <InJaeSang />
+      </InjaeSangField>
     </MemberGuidAll>
   );
 };
+
+const InJaeTitle = styled.div``;
+
+const InjaeSangField = styled.div`
+  margin-top: 12%;
+`;
 
 const MemberGuidAll = styled.div`
   width: 100%;
