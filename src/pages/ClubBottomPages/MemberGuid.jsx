@@ -1,10 +1,12 @@
 import { useState } from "react";
 import styled from "styled-components";
+
 import { Major } from "../../components/Club/Major";
 import { InterviewImg } from "../../components/Club/InterviewImg";
 import { HowMethod } from "../../components/Club/HowMethod";
 import { InJaeSang } from "../../components/Club/InJaeSang";
 import { Subject } from "../../components/Club/Subject";
+import { OtherInfo } from "../../components/Club/OtherInfo";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -79,9 +81,22 @@ export const MemberGuid = () => {
         </SubjectTitle>
         <Subject />
       </SubjectsAll>
+
+      <OtherInfoAll>
+        <InfoTitle>
+          <Title>기타 안내</Title>
+        </InfoTitle>
+        <OtherInfo />
+      </OtherInfoAll>
     </MemberGuidAll>
   );
 };
+
+const InfoTitle = styled.div``;
+
+const OtherInfoAll = styled.div`
+  margin-top: 10%;
+`;
 
 const SubjectTitle = styled.div``;
 

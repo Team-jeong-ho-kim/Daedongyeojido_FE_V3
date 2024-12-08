@@ -15,6 +15,7 @@ export const Subject = () => {
 
 const SubjectAll = styled.div`
   margin: 1% 0 0 7%;
+  font-size: 22px;
 `;
 
 const Content = styled.div``;

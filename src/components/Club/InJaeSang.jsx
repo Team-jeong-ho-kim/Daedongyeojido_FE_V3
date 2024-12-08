@@ -13,6 +13,7 @@ export const InJaeSang = () => {
 
 const InJaeSangAll = styled.div`
   margin: 1% 0 0 7%;
+  font-size: 22px;
 `;
 
 const Content = styled.div``;
