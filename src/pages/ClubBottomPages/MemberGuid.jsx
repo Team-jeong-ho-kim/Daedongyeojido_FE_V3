@@ -4,6 +4,7 @@ import { Major } from "../../components/Club/Major";
 import { InterviewImg } from "../../components/Club/InterviewImg";
 import { HowMethod } from "../../components/Club/HowMethod";
 import { InJaeSang } from "../../components/Club/InJaeSang";
+import { Subject } from "../../components/Club/Subject";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -70,9 +71,23 @@ export const MemberGuid = () => {
         </InJaeTitle>
         <InJaeSang />
       </InjaeSangField>
+
+      {/* 과제 */}
+      <SubjectsAll>
+        <SubjectTitle>
+          <Title>과제</Title>
+        </SubjectTitle>
+        <Subject />
+      </SubjectsAll>
     </MemberGuidAll>
   );
 };
+
+const SubjectTitle = styled.div``;
+
+const SubjectsAll = styled.div`
+  margin-top: 10%;
+`;
 
 const InJaeTitle = styled.div``;
 
