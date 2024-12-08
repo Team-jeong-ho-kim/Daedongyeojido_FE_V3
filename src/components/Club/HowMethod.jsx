@@ -40,6 +40,8 @@ const Title = styled.h1`
 `;
 
 const Contents = styled.div`
+  font-size: 22px;
+
   .period,
   .support {
     display: flex;

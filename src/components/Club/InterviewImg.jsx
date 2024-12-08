@@ -27,15 +27,15 @@ export const InterviewImg = () => {
 const InterviewImgAll = styled.div`
   margin-top: 5%;
   position: relative;
-  width: 100%;
+  width: 1500px;
   height: 100px;
   display: flex;
   justify-content: center;
-  gap: 3%;
+  gap: 50px;
 
   .line {
     position: absolute;
-    width: 62%;
+    width: 60%;
     height: 2px;
     top: 50%;
     transform: translateY(-50%);
