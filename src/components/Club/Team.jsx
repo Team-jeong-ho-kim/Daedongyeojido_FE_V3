@@ -21,6 +21,7 @@ export const Team = () => {
 const ClubInfo = styled.div`
   padding: 20px 80px 0px 20px;
   border: 1px solid #B2B2B2;
+  box-shadow: 0px 5px 5px -2px gray;
   height: 140px;
   border-radius: 10px;
 `
