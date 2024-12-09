@@ -1,27 +1,35 @@
 import styled from "styled-components";
+import { Team } from "./Team";
 
 export const Teammate = () => {
   return (
-    <ClubAll>
-      <ClubInfo>
-      아니근데 이거진짜 왜이럼?
-      </ClubInfo>
-    </ClubAll>
+    <Container>
+    <TeamAll>
+      <Team></Team>
+      <Team></Team>
+      <Team></Team>
+      <Team></Team>
+      <Team></Team>
+      <Team></Team>
+    </TeamAll>
+    </Container>
   );
 };
 
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
-const ClubAll = styled.div`
-  width: 1200px;
-  height: 180px;
+const TeamAll = styled.div`
+  width: 1300px;
+  height: 100%;
   margin-top: 3%;
   border-radius: 7px;
-  overflow: hidden;
   display: flex;
+  padding: 10px 10px 10px 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left:80px;
 `;
-
-const ClubInfo = styled.p`
-  margin: 0;
-  font-size: 20px;
-  color: #5E5E5E;
-`
