@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+
 import Daedong from "../../assets/동아리사진.svg";
 import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
@@ -21,7 +22,7 @@ export const TeamProfiles = () => {
       case "introProject":
         return <IntroProject />;
       case "memberGuid":
-        return <MemberGuid />
+        return <MemberGuid />;
       default:
         return <NullClub />;
     }
@@ -150,15 +151,16 @@ const Tag = styled.div`
   font-weight: 400;
   height: 100%;
   cursor: pointer;
-  user-select: none; 
-  -webkit-user-select: none;  
+  user-select: none;
+  -webkit-user-select: none;
   color: ${({ isClicked }) => (isClicked ? "#d32f2f" : "inherit")};
-  border-bottom: ${({ isClicked }) => (isClicked ? "2px solid #d32f2f" : "none")};
+  border-bottom: ${({ isClicked }) =>
+    isClicked ? "2px solid #d32f2f" : "none"};
   position: relative;
   overflow: hidden;
-  
+
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: -100%;
@@ -171,7 +173,7 @@ const Tag = styled.div`
   &:hover::before {
     left: 0;
   }
-  
+
   &:hover,
   &:active {
     color: #d32f2f;
