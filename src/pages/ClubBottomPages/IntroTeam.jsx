@@ -18,12 +18,13 @@ const Container = styled.div`
 `
 
 const IntroProjectAll = styled.div`
-  width: 1000px;
+  width: 1300px;
   margin-top: 70px;
-  border: 1px solid black;
+  height: 100%;
 `;
 
 const IntroTitle = styled.h1`
+  margin-left: 100px;
   font-size: 34px;
   font-weight: 400;
 `;
