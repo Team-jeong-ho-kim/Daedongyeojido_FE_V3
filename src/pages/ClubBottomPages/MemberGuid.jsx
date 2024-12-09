@@ -1,9 +1,13 @@
 import { useState } from "react";
 import styled from "styled-components";
+
 import { Major } from "../../components/Club/Major";
 import { InterviewImg } from "../../components/Club/InterviewImg";
 import { HowMethod } from "../../components/Club/HowMethod";
 import { InJaeSang } from "../../components/Club/InJaeSang";
+import { Subject } from "../../components/Club/Subject";
+import { OtherInfo } from "../../components/Club/OtherInfo";
+import { Question } from "../../components/Club/Question";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -70,9 +74,51 @@ export const MemberGuid = () => {
         </InJaeTitle>
         <InJaeSang />
       </InjaeSangField>
+
+      {/* 과제 */}
+      <SubjectsAll>
+        <SubjectTitle>
+          <Title>과제</Title>
+        </SubjectTitle>
+        <Subject />
+      </SubjectsAll>
+
+      {/* 기타 안내 */}
+      <OtherInfoAll>
+        <InfoTitle>
+          <Title>기타 안내</Title>
+        </InfoTitle>
+        <OtherInfo />
+      </OtherInfoAll>
+
+      {/* 문의 사항 */}
+      <QuestionsAll>
+        <QuestionTitle>
+          <Title>문의사항</Title>
+        </QuestionTitle>
+        <Question />
+      </QuestionsAll>
     </MemberGuidAll>
   );
 };
+
+const QuestionTitle = styled.div``;
+
+const QuestionsAll = styled.div`
+  margin-top: 10%;
+`;
+
+const InfoTitle = styled.div``;
+
+const OtherInfoAll = styled.div`
+  margin-top: 10%;
+`;
+
+const SubjectTitle = styled.div``;
+
+const SubjectsAll = styled.div`
+  margin-top: 10%;
+`;
 
 const InJaeTitle = styled.div``;
 
