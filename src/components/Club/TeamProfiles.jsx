@@ -96,7 +96,7 @@ const TeamProfilesAll = styled.div`
 const ClubName = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 16%;
+  margin-left: 18%;
 `;
 
 const ClubTitle = styled.div`
