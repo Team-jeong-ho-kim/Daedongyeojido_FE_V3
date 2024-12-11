@@ -6,6 +6,11 @@ export const IntroTeam = () => {
     <Container>
     <IntroProjectAll>
       <IntroTitle>팀원 소개</IntroTitle>
+      <IntroGrade>3학년</IntroGrade>
+      <Teammate />
+      <IntroGrade>2학년</IntroGrade>
+      <Teammate />
+      <IntroGrade>1학년</IntroGrade>
       <Teammate />
     </IntroProjectAll>
     </Container>
@@ -28,4 +33,10 @@ const IntroTitle = styled.h1`
   font-size: 34px;
   font-weight: 400;
 `;
+
+const IntroGrade = styled.p`
+  font-size: 25px;
+  margin: 10px 0px 0px 100px;
+  color: #464646;
+`
 
