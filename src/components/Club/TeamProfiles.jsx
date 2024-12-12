@@ -3,21 +3,14 @@ import styled from "styled-components";
 import Daedong from "../../assets/동아리사진.svg";
 import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
-import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
-<<<<<<< Updated upstream
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
+import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { NullClub } from "../../pages/ClubBottomPages/NullClub";
-=======
->>>>>>> Stashed changes
-
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
   const [movePage, setMovePage] = useState("introClub");
-<<<<<<< Updated upstream
   const [clickedTag, setClickedTag] = useState("introClub");
 
-=======
->>>>>>> Stashed changes
   const clubBottomPage = () => {
     switch (movePage) {
       case "introClub":
@@ -27,13 +20,10 @@ export const TeamProfiles = () => {
       case "introProject":
         return <IntroProject />;
       case "memberGuid":
-<<<<<<< Updated upstream
         return <MemberGuid />
-=======
         return <MemberGuid />;
       case "introClub":
         return <IntroClub />;
->>>>>>> Stashed changes
       default:
         return <NullClub />;
     }
