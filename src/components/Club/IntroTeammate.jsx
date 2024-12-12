@@ -22,7 +22,6 @@ const Container = styled.div`
 `
 
 const TeamAll = styled.div`
-  width: 1300px;
   height: 100%;
   margin-top: 20px;
   margin-bottom: 50px;

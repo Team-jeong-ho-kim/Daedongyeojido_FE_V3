@@ -21,7 +21,6 @@ export const TeamProfiles = () => {
         return <IntroProject />;
       case "memberGuid":
         return <MemberGuid />
-        return <MemberGuid />;
       case "introClub":
         return <IntroClub />;
       default:
