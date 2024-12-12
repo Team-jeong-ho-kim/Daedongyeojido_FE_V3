@@ -46,7 +46,6 @@ const ClubInfo = styled.p`
   margin: 0;
   font-size: 20px;
   color: #5E5E5E;
-  white-space: pre-wrap;  // Allows text to wrap and preserves line breaks
-  overflow: auto;  // Adds scrollbar if content exceeds container
-  max-height: 100%;  // Ensures content fits within container
+  white-space: pre-wrap;
+  max-height: 100%; 
 `;
