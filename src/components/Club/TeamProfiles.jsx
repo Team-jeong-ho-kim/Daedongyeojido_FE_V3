@@ -11,12 +11,6 @@ export const TeamProfiles = () => {
   const [movePage, setMovePage] = useState("introClub");
   const [clickedTag, setClickedTag] = useState("introClub");
 
-=======
-
-export const TeamProfiles = () => {
-  const [clubName, setClubName] = useState("대동여지도");
-  const [movePage, setMovePage] = useState("introClub");
->>>>>>> Stashed changes
   const clubBottomPage = () => {
     switch (movePage) {
       case "introClub":
