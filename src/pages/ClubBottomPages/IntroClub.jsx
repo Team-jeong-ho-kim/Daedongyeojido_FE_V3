@@ -20,7 +20,6 @@ const Container = styled.div`
 const IntroProjectAll = styled.div`
   width: 1000px;
   margin-top: 70px;
-  border: 1px solid black;
 `;
 
 const IntroTitle = styled.h1`
