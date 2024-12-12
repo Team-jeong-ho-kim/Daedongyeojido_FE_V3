@@ -1,4 +1,5 @@
 import styled from "styled-components";
+<<<<<<< Updated upstream
 import { ExClub } from "../../components/Club/ExClub";
 
 export const IntroClub = () => {
