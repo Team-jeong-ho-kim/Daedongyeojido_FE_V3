@@ -24,12 +24,13 @@ const Container = styled.div`
 const TeamAll = styled.div`
   width: 1300px;
   height: 100%;
-  margin-top: 3%;
+  margin-top: 20px;
+  margin-bottom: 50px;
   border-radius: 7px;
   display: flex;
   padding: 10px 10px 10px 10px;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin-left:80px;
+  margin-left : 80px;
 `;
