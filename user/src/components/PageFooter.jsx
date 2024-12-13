@@ -1,11 +1,11 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import logoImg from "../assets/logo.svg";
 
-export const Pagefooter = () => {
+export const Pagefooter = ({ notMypage }) => {
   return (
     <>
-      <FooterDiv>
+      <FooterDiv notMypage={notMypage}>
         <Footer>
           <FooterText>
             <LogoImg src={logoImg} />
@@ -61,7 +61,6 @@ const TitleLogo = styled.div`
 `;
 
 const FooterDiv = styled.div`
-  margin-top: 500px;
   bottom: 0;
   background-color: #333;
   color: white;
@@ -71,7 +70,12 @@ const FooterDiv = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  ${({ notMypage }) =>
+    notMypage &&
+    css`
+      position: relative;
+      transform: translateY(50%);
+    `}
 `;
 
 const LogoImg = styled.img`

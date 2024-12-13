@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
+import { MyPage } from "./pages/MyPage";
 
 export const Router = () => {
   return (
@@ -11,6 +12,7 @@ export const Router = () => {
         <Routes>
           <Route path="/seeall" element={<SeeAll />} />
           <Route path="/club" element={<ClubMain />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </BrowserRouter>
     </Container>
