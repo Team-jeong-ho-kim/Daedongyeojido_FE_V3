@@ -9,12 +9,12 @@ export const ClubMain = () => {
     <ClubMainAll>
       <Header />
       <TeamProfiles />
-      <Pagefooter />
+      <Pagefooter notMypage={true} />
     </ClubMainAll>
   );
 };
 
 const ClubMainAll = styled.div`
-  user-select: none; 
+  user-select: none;
   -webkit-user-select: none;
 `;
