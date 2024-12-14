@@ -2,7 +2,15 @@ import styled from "styled-components";
 import Daedong from "../../assets/프로젝트소개대동.svg";
 import Edit from "../../assets/edit.svg";
 
+import { useNavigate } from "react-router-dom";
+
 export const Project = () => {
+  const navigate = useNavigate();
+
+  const goEditPage = () => {
+    navigate("/edit_introProject");
+  };
+
   return (
     <ProjectAll>
       <ImgField>
@@ -17,7 +25,7 @@ export const Project = () => {
           </IconLink1>
         </LinkAll>
       </Content>
-      <EditBtn>
+      <EditBtn onClick={goEditPage}>
         <img src={Edit} alt="✏️" />
         수정하기
       </EditBtn>

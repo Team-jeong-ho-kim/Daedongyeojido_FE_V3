@@ -5,6 +5,9 @@ import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
 import { MyPage } from "./pages/MyPage";
 import { AddIntroProject } from "./pages/AddIntroProject";
+import { EditIntroProject } from "./pages/EditIntroProject";
+import { JobPosting } from "./pages/JobPosting";
+import { EditJobPosting } from "./pages/EditJopPosting";
 
 export const Router = () => {
   return (
@@ -15,6 +18,9 @@ export const Router = () => {
           <Route path="/club" element={<ClubMain />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/add_introProject" element={<AddIntroProject />} />
+          <Route path="/edit_introProject" element={<EditIntroProject />} />
+          <Route path="/jopPosting" element={<JobPosting />} />
+          <Route path="/edit_JobPosting" element={<EditJobPosting />} />
         </Routes>
       </BrowserRouter>
     </Container>
