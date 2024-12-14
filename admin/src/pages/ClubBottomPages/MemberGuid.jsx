@@ -1,5 +1,6 @@
-import { useState } from "react";
 import styled from "styled-components";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Major } from "../../components/Club/Major";
 import { InterviewImg } from "../../components/Club/InterviewImg";
@@ -8,6 +9,8 @@ import { InJaeSang } from "../../components/Club/InJaeSang";
 import { Subject } from "../../components/Club/Subject";
 import { OtherInfo } from "../../components/Club/OtherInfo";
 import { Question } from "../../components/Club/Question";
+
+import Edit from "../../assets/edit.svg";
 
 export const MemberGuid = () => {
   const [introClub, setIntroClub] = useState(
@@ -32,6 +35,11 @@ export const MemberGuid = () => {
     },
   ]);
   const [clubName, setClubName] = useState("대동여지도");
+  const navigate = useNavigate();
+
+  const goEditJobPostingPage = () => {
+    navigate("/edit_JobPosting");
+  };
 
   return (
     <MemberGuidAll>
@@ -45,6 +53,10 @@ export const MemberGuid = () => {
       {/* 모집 분야 */}
       <JoinField>
         <JoinTitle>
+          <EditBtn onClick={goEditJobPostingPage}>
+            <img src={Edit} alt="✏️" />
+            수정하기
+          </EditBtn>
           <Title className="join">모집 분야</Title>
         </JoinTitle>
         <MajorField>
@@ -101,6 +113,30 @@ export const MemberGuid = () => {
     </MemberGuidAll>
   );
 };
+
+const EditBtn = styled.button`
+  width: 130px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 1%;
+  border-radius: 2px;
+  border: 1px solid #b2b2b2;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: 7%;
+
+  img {
+    margin-left: -6px;
+  }
+
+  &:hover {
+    background-color: #ebebeb;
+  }
+`;
 
 const QuestionTitle = styled.div``;
 

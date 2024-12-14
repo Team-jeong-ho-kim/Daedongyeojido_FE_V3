@@ -6,7 +6,7 @@ import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
 import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
-import { NullClub } from "../../pages/ClubBottomPages/NullClub";
+import { NullEditMemberGuide } from "../../pages/NullPage/NullEditMemberGuide";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
@@ -24,7 +24,7 @@ export const TeamProfiles = () => {
       case "memberGuid":
         return <MemberGuid />;
       default:
-        return <NullClub />;
+        return <NullEditMemberGuide />;
     }
   };
 
