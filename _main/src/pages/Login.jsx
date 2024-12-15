@@ -1,11 +1,20 @@
 import styled from "styled-components";
-
 import Logo from "../assets/Logo대동.svg";
 import eye from "../assets/eye.svg";
+import closeEye from "../assets/closeeye.svg";
 import { Pagefooter } from "../components/Pagefooter";
 import { GlobalStyle } from "../GlobalStyle";
+import { useState } from "react";
 
 export const Login = () => {
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+  const [showPw, setShowPw] = useState(false);
+
+  const showPasswordFunc = () => {
+    setShowPw(!showPw);
+  };
+
   return (
     <>
       <GlobalStyle />
@@ -13,14 +22,28 @@ export const Login = () => {
         <img src={Logo} alt="🐯대동여지도" />
         <LoginText>로그인</LoginText>
         <Inputs>
-          <Input placeholder="아이디를 입력하세요" />
+          <Input
+            value={id}
+            onChange={(e) => {
+              setId(e.target.value);
+            }}
+            placeholder="아이디를 입력하세요"
+          />
           <PasswordWrapper>
             <Input
+              value={password}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
               className="pw"
-              type="password"
+              type={showPw ? "text" : "password"}
               placeholder="비밀번호를 입력하세요"
             />
-            <EyeIcon src={eye} alt="비밀번호 보기" />
+            <EyeIcon
+              onClick={showPasswordFunc}
+              src={showPw ? closeEye : eye}
+              alt={showPw ? "비밀번호 숨기기" : "비밀번호 보기"}
+            />
           </PasswordWrapper>
           <LoginBtn>로그인</LoginBtn>
         </Inputs>
