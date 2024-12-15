@@ -15,7 +15,7 @@ export const ApplicationForm = () => {
         아래 문항들에 답변하여 자기가 어떤 사람인지 알려주세요.
       </SubTitle>
 
-      <FormContainer>
+      <FormContainer> 
         <Section>
           <TitleContainer>
             <Name>김미영</Name>
@@ -159,20 +159,10 @@ const TextArea = styled.textarea`
   border-radius: 4px;
   resize: none;
   height: 200px;
-  overflow-y: hidden;
 
   ::-webkit-scrollbar {
     display: block;
     width: 8px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: #F2F2F2;
   }
 `;
 
