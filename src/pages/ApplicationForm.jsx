@@ -205,6 +205,6 @@ const SubmitButton = styled.button`
   float: right; 
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #7d7d7d;
   }
 `;
