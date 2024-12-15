@@ -8,6 +8,8 @@ import { AddIntroProject } from "./pages/AddIntroProject";
 import { EditIntroProject } from "./pages/EditIntroProject";
 import { JobPosting } from "./pages/JobPosting";
 import { EditJobPosting } from "./pages/EditJopPosting";
+import { WriteClubIntro } from "./pages/WriteClubIntro";
+import { EditWriteClubIntro } from "./pages/EditWriteClubIntro.jsx";
 
 export const Router = () => {
   return (
@@ -21,6 +23,8 @@ export const Router = () => {
           <Route path="/edit_introProject" element={<EditIntroProject />} />
           <Route path="/jopPosting" element={<JobPosting />} />
           <Route path="/edit_JobPosting" element={<EditJobPosting />} />
+          <Route path="/add_clubintro" element={<WriteClubIntro />} />
+          <Route path="/edit_clubintro" element={<EditWriteClubIntro />} />
         </Routes>
       </BrowserRouter>
     </Container>

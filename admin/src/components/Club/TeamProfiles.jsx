@@ -7,16 +7,18 @@ import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
 import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
 import { NullEditMemberGuide } from "../../pages/NullPage/NullEditMemberGuide";
+import { NullWriteClubIntro } from "../../pages/NullPage/NullWriteClubIntro";
 
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
   const [movePage, setMovePage] = useState("introClub");
   const [clickedTag, setClickedTag] = useState("introClub");
+  const [isIntroClub, setIsIntroClub] = useState(false);
 
   const clubBottomPage = () => {
     switch (movePage) {
       case "introClub":
-        return <IntroClub />;
+        return isIntroClub ? <IntroClub /> : <NullWriteClubIntro />;
       case "introTeam":
         return <IntroTeam />;
       case "introProject":
