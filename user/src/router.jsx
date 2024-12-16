@@ -6,6 +6,7 @@ import { ClubMain } from "./pages/ClubMain";
 import { ApplicationForm } from "./pages/ApplicationForm";
 import { SeeApplicationForm } from "./pages/SeeApplication";
 import { MyPage } from "./pages/MyPage";
+import { ApplicantList } from "./pages/SupplyApplicant";
 
 export const Router = () => {
   return (
@@ -17,6 +18,7 @@ export const Router = () => {
           <Route path="/seeall" element={<SeeAll />} />
           <Route path="/club" element={<ClubMain />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/applicantlist" element={<ApplicantList />} />
         </Routes>
       </BrowserRouter>
     </Container>
