@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Header } from "../components/Header";
-import { Apply } from "../components/SeeApply/apply";
 
 export const SeeApplicationForm = () => {
   return (
@@ -25,31 +24,26 @@ export const SeeApplicationForm = () => {
         <Section>
             <SectionTitle>자기소개</SectionTitle>
             <Border></Border>
-            <Apply />
         </Section>
 
         <Section>
             <SectionTitle>지원하게 된 계기가 무엇인가?</SectionTitle>
             <Border></Border>
-            <Apply />
         </Section>
 
         <Section>
             <SectionTitle>지원하게 된 계기가 무엇인가?</SectionTitle>
             <Border></Border>
-            <Apply />
         </Section>
 
         <Section>
             <SectionTitle>본인이 전공을 선택한 이유가 무엇인가요?</SectionTitle>
             <Border></Border>
-            <Apply />
         </Section>
 
         <Section>
             <SectionTitle>자기소개</SectionTitle>
             <Border></Border>
-            <Apply />
         </Section>
 
       </FormContainer>
@@ -64,7 +58,7 @@ const Container = styled.div`
   max-width: 768px;
   margin: 0 auto;
   padding: 20px;
-  user-select: none; 
+  user-select: none;
   -webkit-user-select: none;
 `;
 
