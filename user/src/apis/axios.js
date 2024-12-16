@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Cookie } from "../Utils/cookie";
+import { Cookie } from "../utils/cookie";
 
 export const instance = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_URL,

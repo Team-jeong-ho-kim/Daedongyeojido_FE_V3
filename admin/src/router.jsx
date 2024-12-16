@@ -16,15 +16,15 @@ export const Router = () => {
     <Container>
       <BrowserRouter>
         <Routes>
-          <Route path="/seeall" element={<SeeAll />} />
-          <Route path="/club" element={<ClubMain />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/add_introProject" element={<AddIntroProject />} />
-          <Route path="/edit_introProject" element={<EditIntroProject />} />
-          <Route path="/jopPosting" element={<JobPosting />} />
-          <Route path="/edit_JobPosting" element={<EditJobPosting />} />
-          <Route path="/add_clubintro" element={<WriteClubIntro />} />
-          <Route path="/edit_clubintro" element={<EditWriteClubIntro />} />
+          <Route path="/admin/seeall" element={<SeeAll />} />
+          <Route path="/admin/club" element={<ClubMain />} />
+          <Route path="/admin/mypage" element={<MyPage />} />
+          <Route path="/admin/add_introProject" element={<AddIntroProject />} />
+          <Route path="/admin/edit_introProject" element={<EditIntroProject />} />
+          <Route path="/admin/jopPosting" element={<JobPosting />} />
+          <Route path="/admin/edit_JobPosting" element={<EditJobPosting />} />
+          <Route path="/admin/add_clubintro" element={<WriteClubIntro />} />
+          <Route path="/admin/edit_clubintro" element={<EditWriteClubIntro />} />
         </Routes>
       </BrowserRouter>
     </Container>

@@ -5,14 +5,55 @@ import closeEye from "../assets/closeeye.svg";
 import { Pagefooter } from "../components/Pagefooter";
 import { GlobalStyle } from "../GlobalStyle";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { Login } from "../apis/auth";
 
-export const Login = () => {
-  const [id, setId] = useState("");
-  const [password, setPassword] = useState("");
+export const LoginPage = () => {
   const [showPw, setShowPw] = useState(false);
-
   const showPasswordFunc = () => {
     setShowPw(!showPw);
+  };
+
+  const [inputValue, setInputValue] = useState({
+    id: "",
+    password: "",
+  });
+
+  const { id, password } = inputValue;
+  const navigate = useNavigate();
+
+  const onChange = (e) => {
+    const { value, name } = e.target;
+    setInputValue({
+      ...inputValue,
+      [name]: value,
+    });
+  };
+
+  // 서버쪽에서 받은 response 중 role은 역할(어드민, 유저)
+  const handleLogin = async () => {
+    try {
+      const response = await Login({ id, password });
+      if (response.success) {
+        if (response.role === "admin") {
+          navigate("/admin");
+        } else if (response.role === "user") {
+          navigate("/user");
+        } else {
+          alert("로그인에 실패하셨습니다", response.message);
+        }
+      }
+    } catch (error) {
+      if (error.response) {
+        if (error.response.status === 401) {
+          alert("이메일 또는 비밀번호가 일치하지 않습니다. 401");
+        } else if (error.response.status === 404) {
+          alert("유저를 찾을 수 없습니다. 404");
+        } else {
+          alert("로그인 요청 실패");
+        }
+      }
+    }
   };
 
   return (
@@ -23,18 +64,16 @@ export const Login = () => {
         <LoginText>로그인</LoginText>
         <Inputs>
           <Input
+            name="id"
             value={id}
-            onChange={(e) => {
-              setId(e.target.value);
-            }}
+            onChange={onChange}
             placeholder="아이디를 입력하세요"
           />
           <PasswordWrapper>
             <Input
+              name="password"
               value={password}
-              onChange={(e) => {
-                setPassword(e.target.value);
-              }}
+              onChange={onChange}
               className="pw"
               type={showPw ? "text" : "password"}
               placeholder="비밀번호를 입력하세요"
@@ -45,7 +84,9 @@ export const Login = () => {
               alt={showPw ? "비밀번호 숨기기" : "비밀번호 보기"}
             />
           </PasswordWrapper>
-          <LoginBtn>로그인</LoginBtn>
+          <LoginBtn onClick={handleLogin} style={{ cursor: "pointer" }}>
+            로그인
+          </LoginBtn>
         </Inputs>
       </LoginAll>
       <Pagefooter />

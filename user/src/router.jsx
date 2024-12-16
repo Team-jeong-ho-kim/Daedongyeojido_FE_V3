@@ -13,12 +13,12 @@ export const Router = () => {
     <Container>
       <BrowserRouter>
         <Routes>
-          <Route path="/SeeApply" element={<SeeApplicationForm />} />
-          <Route path="/Apply" element={<ApplicationForm />} />
-          <Route path="/seeall" element={<SeeAll />} />
-          <Route path="/club" element={<ClubMain />} />
-          <Route path="/mypage" element={<MyPage />} />
-          <Route path="/applicantlist" element={<ApplicantList />} />
+          <Route path="/user/SeeApply" element={<SeeApplicationForm />} />
+          <Route path="/user/Apply" element={<ApplicationForm />} />
+          <Route path="/user/seeall" element={<SeeAll />} />
+          <Route path="/user/club" element={<ClubMain />} />
+          <Route path="/user/mypage" element={<MyPage />} />
+          <Route path="/user/applicantlist" element={<ApplicantList />} />
         </Routes>
       </BrowserRouter>
     </Container>
