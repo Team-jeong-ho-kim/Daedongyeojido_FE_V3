@@ -16,7 +16,7 @@ export const Router = () => {
     <Container>
       <BrowserRouter>
         <Routes>
-          <Route path="/admin/seeall" element={<SeeAll />} />
+          <Route path="/admin" element={<SeeAll />} />
           <Route path="/admin/club" element={<ClubMain />} />
           <Route path="/admin/mypage" element={<MyPage />} />
           <Route path="/admin/add_introProject" element={<AddIntroProject />} />
