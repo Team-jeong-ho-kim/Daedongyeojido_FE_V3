@@ -4,10 +4,9 @@ import styled from "styled-components";
 import Daedong from "../../assets/동아리사진.svg";
 import { IntroProject } from "../../pages/ClubBottomPages/IntroProject";
 import { MemberGuid } from "../../pages/ClubBottomPages/MemberGuid";
-import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { IntroTeam } from "../../pages/ClubBottomPages/IntroTeam";
+import { IntroClub } from "../../pages/ClubBottomPages/IntroClub";
 import { NullClub } from "../../pages/ClubBottomPages/NullClub";
-
 export const TeamProfiles = () => {
   const [clubName, setClubName] = useState("대동여지도");
   const [movePage, setMovePage] = useState("introClub");
@@ -22,7 +21,9 @@ export const TeamProfiles = () => {
       case "introProject":
         return <IntroProject />;
       case "memberGuid":
-        return <MemberGuid />;
+        return <MemberGuid />
+      case "introClub":
+        return <IntroClub />;
       default:
         return <NullClub />;
     }
@@ -97,7 +98,7 @@ const TeamProfilesAll = styled.div`
 const ClubName = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 16%;
+  margin-left: 18%;
 `;
 
 const ClubTitle = styled.div`
