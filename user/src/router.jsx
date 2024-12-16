@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
-import { ApplicationForm } from"./pages/ApplicationForm";
+import { ApplicationForm } from "./pages/ApplicationForm";
 import { SeeApplicationForm } from "./pages/SeeApplication";
+import { MyPage } from "./pages/MyPage";
+import { ApplicantList } from "./pages/SupplyApplicant";
 
 export const Router = () => {
   return (
@@ -12,10 +14,11 @@ export const Router = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/SeeApply" element={<SeeApplicationForm />} />
-          <Route path="/Apply" element={<ApplicationForm />}/>
+          <Route path="/Apply" element={<ApplicationForm />} />
           <Route path="/seeall" element={<SeeAll />} />
           <Route path="/club" element={<ClubMain />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/applicantlist" element={<ApplicantList />} />
         </Routes>
       </BrowserRouter>
     </Container>
