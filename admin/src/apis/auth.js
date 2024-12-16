@@ -1,4 +1,4 @@
-import { instance } from "./axios";
+import { instance } from "../../../user/src/apis/axios";
 
 const router = "/auth";
 

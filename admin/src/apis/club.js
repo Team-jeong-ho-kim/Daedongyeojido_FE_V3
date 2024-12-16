@@ -1,4 +1,4 @@
-import { instance } from "./axios";
+import { instance } from "../../../user/src/apis/axios";
 
 const router = "/club";
 
@@ -10,4 +10,8 @@ export const getClub = async () => {
 export const getClubDetail = async (clubname) => {
   const response = await instance.get(`${router}/info/${clubname}`);
   return response.data;
+};
+
+export const modifyClubInfo = async (data) => {
+  return await instance.patch(`${router}/modify`, data);
 };
