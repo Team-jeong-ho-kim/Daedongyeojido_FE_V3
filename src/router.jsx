@@ -4,12 +4,14 @@ import styled from "styled-components";
 import { SeeAll } from "./pages/SeeAllPage";
 import { ClubMain } from "./pages/ClubMain";
 import { ApplicationForm } from"./pages/ApplicationForm";
+import { SeeApplicationForm } from "./pages/SeeApplication";
 
 export const Router = () => {
   return (
     <Container>
       <BrowserRouter>
         <Routes>
+          <Route path="/SeeApply" element={<SeeApplicationForm />} />
           <Route path="/Apply" element={<ApplicationForm />}/>
           <Route path="/seeall" element={<SeeAll />} />
           <Route path="/club" element={<ClubMain />} />
