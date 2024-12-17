@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Header } from "../components/Header";
 import { Pagefooter } from "../components/PageFooter";
@@ -14,6 +15,12 @@ export const MyPage = () => {
     club: "대동여지도",
     ClassNumber: "1314",
   });
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    sessionStorage.removeItem("token");
+    sessionStorage.removeItem("id");
+    navigate("/"); // 로그인 뷰로 이동
+  };
 
   return (
     <>
@@ -43,7 +50,7 @@ export const MyPage = () => {
               <Support>지원내역</Support>
             </MiddleAll>
             <UnderAll>
-              <LogoutBtn>로그아웃</LogoutBtn>
+              <LogoutBtn onClick={handleLogout}>로그아웃</LogoutBtn>
             </UnderAll>
           </MyInfo>
         </Left>
