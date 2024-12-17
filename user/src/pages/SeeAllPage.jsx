@@ -10,31 +10,8 @@ export const SeeAll = () => {
   const [clubs, setClubs] = useState([]); // 동아리 데이터를 저장할 상태
   const [loading, setLoading] = useState(true); // 로딩 상태 관리
 
-  // 데이터를 가져오는 함수
-  const fetchClubs = async ({ clubName , clubBanner , title , setData }) => {
-    try {
-      const data = await instance.post('../apis/club.js', {
-        clubName,
-        title,
-        clubBanner
-      }); // API 호출
-      setClubs(data); // 데이터를 상태에 저장
-
-      setData({
-        clubName: '',
-        title: '',
-        clubBanner: '',
-      });
-      
-    } catch (error) {
-      console.error("동아리 데이터를 가져오는 데 실패했습니다...", error);
-    } finally {
-      setLoading(false); // 로딩 상태 종료
-    }
-  };
-
   useEffect(() => {
-    fetchClubs(); // 컴포넌트가 렌더링될 때 API 호출
+    getClub(); // 컴포넌트가 렌더링될 때 API 호출
   }, []);
 
   return (
