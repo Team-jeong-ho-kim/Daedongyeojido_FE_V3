@@ -14,6 +14,55 @@ export const MyPage = () => {
     club: "대동여지도",
     ClassNumber: "1314",
   });
+  const [uploadImgUrl, setUploadImgUrl] = useState("");
+  const [file, setFile] = useState(null);
+
+  const handleSubmit = async (file) => {
+    const formData = new FormData();
+
+    formData.append("name", student.name);
+    formData.append("club", student.club);
+    formData.append("ClassNumber", styled.ClassNumber);
+
+    if (file) {
+      formData.append("profilImage", file);
+    }
+
+    try {
+      const response = await fetch("http://localhost:5173/file/image", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        const result = await response.json();
+        console.log("업로드 성공: ", result);
+        alert("프로필 이미지와 데이터 저장 성공!");
+      } else {
+        console.error("업로드 실패: ", response.statusText);
+        alert("업로드 실패...");
+      }
+    } catch (error) {
+      console.error("Error: ", error);
+      alert("서버와 연결 중 오류가 발생하였습니다.");
+    }
+  };
+
+  const imageUpload = (e) => {
+    const { files } = e.target;
+    if (files.length > 0) {
+      const uploadFile = files[0];
+      setFile(uploadFile);
+
+      const reader = new FileReader();
+      reader.readAsDataURL(uploadFile);
+      reader.onloadend = () => {
+        setUploadImgUrl(reader.result);
+      };
+
+      handleSubmit();
+    }
+  };
 
   return (
     <>
@@ -32,8 +81,20 @@ export const MyPage = () => {
                     <ClassNumber>{student.ClassNumber}</ClassNumber>
                   </ClubAndClass>
                   <Profils>
-                    <ProfilEdit src={profilEdit}></ProfilEdit>
-                    <ProfileImage src={profil} alt="Profile" />
+                    <HiddenFileInput
+                      type="file"
+                      accept="image/*"
+                      onChange={imageUpload}
+                      id="upload-input"
+                    />
+                    <ProfilEdit
+                      onClick={() =>
+                        document.getElementById("upload-input").click()
+                      }
+                      src={profilEdit}
+                      alt="Edit"
+                    />
+                    <ProfileImage src={uploadImgUrl || profil} alt="Profile" />
                   </Profils>
                 </InfoContainer>
               </Affiliation>
@@ -59,6 +120,10 @@ export const MyPage = () => {
     </>
   );
 };
+
+const HiddenFileInput = styled.input`
+  display: none;
+`;
 
 const IdoJiwon = styled.div`
   width: 100%;
@@ -117,8 +182,9 @@ const Support = styled.div`
 `;
 
 const ProfileImage = styled.img`
-  max-width: 80px;
-  max-height: 80px;
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
 
   @media (max-width: 768px) {
     max-width: 60px;
