@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { CollectBtn } from "../components/SeeallPage/CollectBtn";
 import { Pagefooter } from "../components/PageFooter";
+import { getClub } from "../apis/club"; // API 호출 함수 가져오기
 import searchBtn from "../assets/searchBtn.svg";
 
 export const SeeAll = () => {
+  const [clubs, setClubs] = useState([]); // 동아리 데이터를 저장할 상태
+  const [loading, setLoading] = useState(true); // 로딩 상태 관리
+
+  useEffect(() => {
+    getClub(); // 컴포넌트가 렌더링될 때 API 호출
+  }, []);
+
   return (
     <Container>
       <Header />
@@ -18,24 +26,32 @@ export const SeeAll = () => {
             <SearchButton src={searchBtn} />
           </SearchBar>
         </SearchDiv>
-        <Grid>
-          {Array.from({ length: 8 }).map((_, index) => (
-            <Card key={index}>
-              <CardImage>
-                <CollectBtn />
-              </CardImage>
-              <CardContent>
-                <h3>대동여지도</h3>
-                <p>대동여지도와 실록 서비스를 개발 및 운영 중인 동아리</p>
-              </CardContent>
-            </Card>
-          ))}
-        </Grid>
+        {loading ? ( // 로딩 중일 때 표시
+          <LoadingMessage>로딩 중...</LoadingMessage>
+        ) : (
+          <Grid>
+            {clubs.map((club) => (
+              <Card key={club.id}>
+                <CardImage>
+                  <CollectBtn />
+                </CardImage>
+                <CardContent>
+                  <h3>{club.name}</h3>
+                  <p>{club.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </Grid>
+        )}
       </Content>
       <Pagefooter notMypage={true} />
     </Container>
   );
 };
+
+const LoadingMessage = styled.div`
+
+`;
 
 const Container = styled.div`
   margin: 0;
